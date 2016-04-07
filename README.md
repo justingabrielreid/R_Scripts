@@ -1,2 +1,2 @@
 # R_Scripts
-This repository will contain R scripts used to analyze, transform, and clean datasets. 
+This repository will contain R_scripts and the associated datasets as well as my insights into the statistical significance of the various datasets. Most of these datasets will be data sets acquired through class, research projects or on the web. Anyone is welcome to look over my work and offer advice on how I could of done something better or how I might of have missed some valuable insight. 
