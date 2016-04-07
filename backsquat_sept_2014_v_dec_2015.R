@@ -1,7 +1,7 @@
 #Plot and t-test of September 2014 v December 2014
 
 #import the dataset 
-bs <- read.csv('~/R/R_Work_Space/DataSets/backsquat.csv')
+bs <- read.csv('DataSets/backsquat.csv')
 
 #perform a t-test on the backsquat data for Sep2014 & Dec2014
 t.test(bs[['Sep..2014']], bs[['Dec..2015']], paired=T)
