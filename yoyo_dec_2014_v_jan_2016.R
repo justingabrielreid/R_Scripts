@@ -1,7 +1,7 @@
 #analysis of yoyo training data for softball atheletes 
 
 #import the csv file yoyo data
-yoyo <- read.csv('R_Work_Space/DataSets/yoyo_data.csv')
+yoyo <- read.csv('yoyo_data.csv')
 
 #perform t test on the data 
 t.test(yoyo[['Dec..2014']], yoyo[['Jan..2016']], paired = T)
@@ -9,8 +9,7 @@ t.test(yoyo[['Dec..2014']], yoyo[['Jan..2016']], paired = T)
 #thus the columns have a high likely hood of being independent of each other 
 
 #constructing a dataframe from the csv file 
-yoyo14_to_16 <- data.frame(m1 = yoyo[['Dec..2014']],
-                   m3 = yoyo[['Jan..2016']])
+yoyo14_to_16 <- data.frame(m1 = yoyo[['Dec..2014']], m3 = yoyo[['Jan..2016']])
 #transpose the dataframe 
 t_yoyo14_to_16 <- t(yoyo14_to_16)
 #name the columns

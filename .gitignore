@@ -20,3 +20,4 @@ vignettes/*.pdf
 
 # tmp files
 *.tmp
+.DS_Store
