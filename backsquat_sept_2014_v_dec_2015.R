@@ -1,7 +1,7 @@
 #Plot and t-test of September 2014 v December 2014
 
-#import the dataset 
-bs <- read.csv('DataSets/backsquat.csv')
+#import the dataset
+bs <- read.csv('backsquat.csv')
 
 #perform a t-test on the backsquat data for Sep2014 & Dec2014
 t.test(bs[['Sep..2014']], bs[['Dec..2015']], paired=T)
@@ -17,7 +17,7 @@ colnames(tbs14) <- 1:19
 cc14<- tbs14[ , t(complete.cases(t(tbs14)))]
 #plotting the complete dataset
 #first column in green circles 
-plot(cc14[ 1, ], col = 'green', pch=16, ylim=c(0, 400))
+plot(cc14[ 1, ], col = 'black', pch=16, ylim=c(0, 400))
 #second column in yellow triangles 
-points(cc14[ 2, ], col = 'yellow', pch=17)
+points(cc14[ 2, ], col = 'red', pch=17)
 
