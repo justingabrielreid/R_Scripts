@@ -17,5 +17,22 @@ cc15_16 <- t_vert_jump_15_16[,t(complete.cases(t(t_vert_jump_15_16)))]
 
 #plotting time 
 plot(cc15_16[1,], col='black', pch=16, ylim=c(17,26))
-points(cc15_16[2,], col = 'green', pch=17, title(main='Vertical Jump September 2015 - December 2016'), legend(x,y, legend = c['Black is September 2015', 'Green is December 2016']))
+points(cc15_16[2,], col = 'green', pch=17, title(main='Vertical Jump September 2015 - January 2016'))
+
+mean(cc15_16[1,])
+mean(cc15_16[2,])
+
+#Look at earlier data to see if this lack of progess in vertical jump performance is a coninuing trend
+t.test(vert_jump[['Sep..2014']], vert_jump[['Dec..2014']], paired = T)
+vert_jumpS14_to_D14 <- data.frame(m1 = vert_jump[['Sep..2014']], m3 = vert_jump[['Dec..2014']])
+t_vert_jumpS14_to_D14 <- t(vert_jumpS14_to_D14)
+colnames(t_vert_jumpS14_to_D14) <- 1:19
+
+ccS14_D14 <- t_vert_jumpS14_to_D14[,t(complete.cases(t(t_vert_jumpS14_to_D14)))]
+plot(ccS14_D14[1,], col='blue',pch=18, ylim = c(17,26))
+points(ccS14_D14[2,], col= 'red', pch =17, title('Vertical Jump September 2014 to December 2014'))
+mean(ccS14_D14[1,])
+mean(ccS14_D14[2,])
+sd(ccS14_D14[1,])
+sd(ccS14_D14[2,])
 
