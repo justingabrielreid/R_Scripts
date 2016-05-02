@@ -20,10 +20,12 @@ colnames(t_yoyo14_to_16) <- 1:19
 
 cc14_16<- t_yoyo14_to_16[, t(complete.cases(t(t_yoyo14_to_16)))]
 #plotting the first row of the data Dec..2014 in red circles 
-plot(cc14_16[ 1, ], col = 'red', pch=16, ylim=c(0, 1200))
+plot(cc14_16[ 1, ], col = 'red', pch=16, ylim=c(0, 1200), xlab = 'Player ID', ylab = 'Meters Ran')
 #plotting the second column of the data Jan..2016 in green triangles
-points(cc14_16[ 2, ], col = 'green', pch=17)
+points(cc14_16[ 2, ], col = 'green', pch=17, title(main = 'Yoyo Intermittent Recovery Test', sub = 'December 2014 (red) to January 2016 (green)'))
 
+mean(cc14_16[1,])
+mean(cc14_16[2,])
 
 
 
